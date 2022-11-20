@@ -1,0 +1,30 @@
+<h2>Users</h2>
+<button routerLink="new" type="button" class="btn btn-primary">Add User</button>
+<table class="table table-striped table-hover">
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Birthday</th>
+      <th>Karma</th>
+      <th>CRUD</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.emailAddress }}</td>
+        <td>{{ user.birthday.toISOString().split('T')[0] }}</td>
+        <td>{{ user.karma }}</td>
+        
+        <td>
+            <button (click)="onSelect(user)" type="button" class="btn btn-primary">Details</button>
+            <button (click)="onDelete(user)" type="button" class="btn btn-danger">Delete</button>
+            <button routerLink="{{user.id}}/edit" type="button" class="btn btn-warning">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<app-user-detail [user]="selectedUser"></app-user-detail>
