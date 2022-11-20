@@ -1,0 +1,27 @@
+<div *ngIf="user">
+
+    <p class="h4 title">{{user.name | uppercase}} Details</p>
+    <div class="container">
+      <div>
+        <label for="id" class="h5">id </label><br>
+        <input disabled="true" id="id" [(ngModel)]="user.id" placeholder="id">
+      </div>
+      <div>
+        <label class="h5" for="user-name">User name </label><br>
+        <input disabled="true" id="user-name" [(ngModel)]="user.name" placeholder="name">
+      </div>
+      <div>
+        <label class="h5" for="emailAddress">Email </label><br>
+        <input disabled="true" id="emailAddress" [(ngModel)]="user.emailAddress" placeholder="emailAddress">
+      </div>
+      <div>
+        <label class="h5" for="birthday">birthday </label><br>
+        <input disabled="true" id="Birthday" [(ngModel)]="user.birthday.toISOString().split('T')[0]" placeholder="birthday">
+      </div>
+      <div>
+        <label class="h5" for="karma">Karma </label><br>
+        <input disabled="true" id="karma" [(ngModel)]="user.karma" placeholder="karma">
+      </div>
+    </div>
+  
+  </div>
