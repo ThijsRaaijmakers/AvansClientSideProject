@@ -1,0 +1,31 @@
+<div *ngIf="post">
+
+    <p class="h4 title">{{post.title | uppercase}}</p>
+    <div class="container">
+      <div>
+        <label for="id" class="h5">id </label><br>
+        <input disabled="true" id="id" [(ngModel)]="post.id" placeholder="id">
+      </div>
+      <div>
+        <label class="h5" for="author">Author </label><br>
+        <input disabled="true" id="author" [(ngModel)]="post.author.name" placeholder="author">
+      </div>
+      <div>
+        <label class="h5" for="community">Community </label><br>
+        <input disabled="true" id="community" [(ngModel)]="post.community.name" placeholder="community">
+      </div>
+      <div>
+        <label class="h5" for="title">Title </label><br>
+        <input disabled="true" id="title" [(ngModel)]="post.title" placeholder="title">
+      </div>
+      <div>
+        <label class="h5" for="content">Content </label><br>
+        <input disabled="true" id="content" [(ngModel)]="post.content" placeholder="content">
+      </div>
+      <div>
+        <label class="h5" for="isNSFW">isNSFW </label><br>
+        <input disabled="true" id="isNSFW" [(ngModel)]="post.isNSFW" placeholder="isNSFW">
+      </div>
+    </div>
+  
+  </div>

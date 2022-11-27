@@ -1,0 +1,12 @@
+<h2>Feed</h2>
+<div class="container" *ngFor="let post of posts">
+    <p>Post ID: {{ post.id }}</p>
+    <p>Posted on: {{ post.community.name }}</p>
+    <p>Posted by {{ post.author.name }}</p>
+    <p>{{ post.title }}</p>
+    <p>{{ post.content }}</p>
+    <p>{{ post.isNSFW }}</p>
+    <button routerLink="post/{{post.id}}/details" type="button" class="btn btn-primary">Details</button>
+    <p>------------------------------</p>
+    <br>
+</div>
